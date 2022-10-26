@@ -87,16 +87,14 @@ def getOptions(dataStream: DataStream):
     data = {
         "categoriesWiseData": createOptions("Category Wise Count", categories, "bar", categoriesWiseCount),
         "testingAndTraining": createOptions("Category Wise Count (Training and Testing Data)", categories,
-                                                    'bar', ({
-                                                        "name": "Testing Data",
+                                            'bar', ({
+                                                "name": "Testing Data",
                                                         "data": testingCategoriesWiseCount
-                                                    }, {
-                                                        "name": "Training Data",
+                                            }, {
+                                                "name": "Training Data",
                                                         "data": trainingCategoriesWiseCount
-                                                    },)),
-        "trainingData": createOptions("Category Wise Count (Training Data)", trainingCategories, 'pie',
-                                      trainingCategoriesWiseCount),
-        "testingData": createOptions("Category Wise Count (Testing Data)", testingCategories, 'pie',
-                                     testingCategoriesWiseCount)
+                                            },)),
+        "trainingData": createOptions("Category Wise Count (Training Data)", trainingCategories, 'pie', trainingCategoriesWiseCount),
+        "testingData": createOptions("Category Wise Count (Testing Data)", testingCategories, 'pie', testingCategoriesWiseCount)
     }
     return data

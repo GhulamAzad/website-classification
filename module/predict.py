@@ -14,7 +14,8 @@ def predictCategory(website: str, mlModel: MLModel, ds: DataStream):
     text = (clean_text(web['website_text']))
     t = mlModel.getFittedVectorized().transform([text])
 
-    predictedCategory = ds.getCategoryId()[mlModel.getProbabilityModel().predict(t)[0]]
+    predictedCategory = ds.getCategoryId(
+    )[mlModel.getProbabilityModel().predict(t)[0]]
 
     data = pd.DataFrame(mlModel.getProbabilityModel().predict_proba(
         t) * 100, columns=ds.getDF()['Category'].unique())
@@ -24,11 +25,13 @@ def predictCategory(website: str, mlModel: MLModel, ds: DataStream):
     a = data.sort_values(['Probability'], ascending=False)
     a['Probability'] = a['Probability'].apply(
         lambda x: round(x, 2))
-    a = a[a['Probability'] >= 1]
+    # a = a[a['Probability'] >= 1]
 
     data = {
         "predictedCategory": predictedCategory,
-        "chartOption": createOptions("Probability", list(a.index), 'pie', list(a['Probability']))
+        "chartOption": {
+            "resultData": createOptions(f"Probability Prediction for each Category of the {website}", list(a.index), 'pie', list(a['Probability']))
+        }
     }
 
     return data

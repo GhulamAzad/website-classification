@@ -5,64 +5,67 @@ Teams
 {% endblock %}
 
 {% block content %}
-<div class="min-w-full bg-slate-900">
-  <section class="md:min-h-[80vh] mt-20 md:mt-0 flex items-center">
-    <div class="max-w-5xl mx-auto md:pl-24">
-      <div class="team-card transition-all z-10 flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:ml-6">
-        <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md overflow-hidden relative from-right"
-          style="--delay: 0s">
-          <img src="{{ url_for('static', path='/img/ghulam.jpg') }}" alt="Md.Ghulam Azad Ansari"
-            class="absolute w-full h-full object-cover -rotate-45 scale-150" />
-        </div>
-
-        <div class="hidden md:block h-[.1rem] bg-orange-500 w-[20%] inc-width" style="--delay: 2s"></div>
-
-        <div class="md:w-96 pl-4 text-center md:text-start">
-          <h1 class="text-xl  text-orange-500 text-yellow-300 from-bottom text-yellow-300 font-semibold"
-            style="--delay: 3.5s">
-            Md.Ghulam Azad Ansari
-          </h1>
-          <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
-            12108193
-          </p>
-        </div>
+<div class="mt-6 md:-mt-10">
+  <h1 class="text-xl md:text-5xl text-indigo-500 font-extrabold text-center">
+    Our Team
+  </h1>
+</div>
+<section class="md:min-h-[80vh] mt-20 md:mt-0 flex items-center">
+  <div class="max-w-5xl mx-auto md:pl-24">
+    <div class="team-card transition-all z-10 flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:ml-6">
+      <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md overflow-hidden relative from-right"
+        style="--delay: 0s">
+        <img src="{{ url_for('static', path='/img/ghulam.jpg') }}" alt="Md.Ghulam Azad Ansari"
+          class="absolute w-full h-full object-cover -rotate-45 scale-150" />
       </div>
-      <div
-        class="team-card transition-all flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:-mt-[6.5rem] md:-ml-[6rem]">
-        <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md relative overflow-hidden from-right"
-          style="--delay: 1s">
-          <img src="{{ url_for('static', path='/img/anchal.jpg') }}" alt="Anchal Gupta"
-            class="absolute w-full h-full object-cover -rotate-45 scale-[1.38]" />
-        </div>
-        <div class="hidden md:block h-[.1rem] bg-pink-600  w-[80%] inc-width" style="--delay: 2s"></div>
-        <div class="md:w-96 pl-4 text-center md:text-start md:self-baseline mt-4">
-          <h1 class="text-xl text-pink-600 text-pink-300 from-bottom font-semibold" style="--delay: 3.5s">
-            Anchal Gupta
-          </h1>
-          <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
-            12108163
-          </p>
-        </div>
-      </div>
-      <div
-        class="team-card transition-all flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:-mt-[10rem] md:ml-[5rem]">
-        <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md relative overflow-hidden from-right"
-          style="--delay: 0.5s">
-          <img src="{{ url_for('static', path='/img/afsar.jpg') }}" alt="Afsar Alam"
-            class="absolute w-full h-full object-cover -rotate-45 scale-[1.38]" />
-        </div>
-        <div class="hidden md:block h-[.1rem] bg-indigo-500 w-[15%] inc-width" style="--delay: 2s"></div>
-        <div class="md:w-96 pl-4 text-center md:text-start">
-          <h1 class="text-xl text-indigo-700 text-blue-700 from-bottom font-semibold" style="--delay: 3.5s">
-            Afsar Alam
-          </h1>
-          <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
-            12108195
-          </p>
-        </div>
+
+      <div class="hidden md:block h-[.1rem] bg-orange-500 w-[20%] inc-width" style="--delay: 2s"></div>
+
+      <div class="md:w-96 pl-4 text-center md:text-start">
+        <h1 class="text-xl  text-orange-500 text-yellow-300 from-bottom text-yellow-300 font-semibold"
+          style="--delay: 3.5s">
+          Md.Ghulam Azad Ansari
+        </h1>
+        <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
+          12108193
+        </p>
       </div>
     </div>
-  </section>
-</div>
+    <div
+      class="team-card transition-all flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:-mt-[6.5rem] md:-ml-[6rem]">
+      <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md relative overflow-hidden from-right"
+        style="--delay: 1s">
+        <img src="{{ url_for('static', path='/img/anchal.jpg') }}" alt="Anchal Gupta"
+          class="absolute w-full h-full object-cover -rotate-45 scale-[1.38]" />
+      </div>
+      <div class="hidden md:block h-[.1rem] bg-pink-600  w-[80%] inc-width" style="--delay: 2s"></div>
+      <div class="md:w-96 pl-4 text-center md:text-start md:self-baseline mt-4">
+        <h1 class="text-xl text-pink-600 text-pink-300 from-bottom font-semibold" style="--delay: 3.5s">
+          Anchal Gupta
+        </h1>
+        <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
+          12108163
+        </p>
+      </div>
+    </div>
+    <div
+      class="team-card transition-all flex flex-col gap-8 md:gap-0 md:flex-row items-center p-8 md:-mt-[10rem] md:ml-[5rem]">
+      <div class="team-card-image w-40 shrink-0 h-40 rotate-45 rounded-md relative overflow-hidden from-right"
+        style="--delay: 0.5s">
+        <img src="{{ url_for('static', path='/img/afsar.jpg') }}" alt="Afsar Alam"
+          class="absolute w-full h-full object-cover -rotate-45 scale-[1.38]" />
+      </div>
+      <div class="hidden md:block h-[.1rem] bg-indigo-500 w-[15%] inc-width" style="--delay: 2s"></div>
+      <div class="md:w-96 pl-4 text-center md:text-start">
+        <h1 class="text-xl text-indigo-700 text-blue-700 from-bottom font-semibold" style="--delay: 3.5s">
+          Afsar Alam
+        </h1>
+        <p class="from-bottom text-slate-600 text-sm" style="--delay: 4s">
+          12108195
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

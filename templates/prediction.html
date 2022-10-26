@@ -7,20 +7,20 @@ Prediction Demo
 {% block content %}
 
 <!-- STATISTICS -->
-<h2 class="text-center text-pink-600 text-4xl font-bold mb-20 mt-10">
+<h2 class="text-center text-pink-600 text-4xl font-bold my-20">
     Statistics
 </h2>
 <div id="charts" class="flex flex-col flex-wrap min-w-full p-4 gap-2 justify-center mt-4 rounded-lg md:flex-row">
-
+    <!-- Chart added here -->
 </div>
 
 
 {% endblock %}
 
 {% block script %}
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
-    const data = {{ data| tojson }};
+    const data = {{ data | tojson }}
 </script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="{{ url_for('static', path='/js/charts.js') }}"></script>
 {% endblock %}

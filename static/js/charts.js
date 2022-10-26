@@ -28,7 +28,7 @@ const pieOptions = ({ title, series, labels }) => {
             offsetX: 0,
             dropShadow: {
                 enabled: false
-            }
+            },
         },
         legend: {
             position: 'bottom'
@@ -40,7 +40,27 @@ const pieOptions = ({ title, series, labels }) => {
                     width: 360,
                 },
                 legend: {
-                    position: 'bottom'
+                    show: false,
+                }
+            }
+        }, {
+            breakpoint: 425,
+            options: {
+                chart: {
+                    width: 320,
+                },
+                legend: {
+                    show: false,
+                }
+            }
+        }, {
+            breakpoint: 375,
+            options: {
+                chart: {
+                    width: 250,
+                },
+                legend: {
+                    show: false,
                 }
             }
         }]
@@ -105,7 +125,38 @@ const barOption = ({ title, series, labels }) => {
                     }
                 }
             }
-        }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 360,
+                },
+                legend: {
+                    show: false,
+                }
+            }
+        }, {
+            breakpoint: 425,
+            options: {
+                chart: {
+                    width: 320,
+                },
+                legend: {
+                    show: false,
+                }
+            }
+        }, {
+            breakpoint: 375,
+            options: {
+                chart: {
+                    width: 250,
+                },
+                legend: {
+                    show: false,
+                }
+            }
+        }]
     }
 };
 

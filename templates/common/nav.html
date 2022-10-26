@@ -1,20 +1,37 @@
-<nav class="flex justify-between items-center px-8 py-6 w-full">
-  <div class="text-lg font-bold text-indigo-500">
+<nav class="flex justify-between items-center px-2 py-3 w-full">
+  <div class="container flex flex-wrap justify-between items-center mx-auto text-lg font-bold text-indigo-500 sm:px-8">
     <a href="/">
       <h2>Website Category Classifier</h2>
     </a>
+    <button data-collapse-toggle="navbar-default" id="menuBtn" type="button" onclick="navToggle()"
+      class="inline-flex items-center p-2 ml-3 text-sm text-indigo-500 rounded-lg md:hidden focus:outline-none focus:ring-2"
+      aria-controls="navbar-default" aria-expanded="false">
+      <div id="humburger-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+    </button>
   </div>
-  <ul class="flex gap-8">
-    <li>
-      <a href="#statistics"
-        class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Statistics</a>
-    </li>
-    <li>
-      <a href="/prediction"
-        class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Prediction</a>
-    </li>
-    <li>
-      <a href="/team" class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Teams</a>
-    </li>
-  </ul>
+
+  <div class="hidden fixed inset-0 bg-indigo-300/50 opacity-100 z-10" id="overlay-menu"></div>
+  <div
+    class="hidden fixed inset-x-5 top-12 mt-4 flex-col rounded-2xl bg-white  p-3 text-lg tracking-tight text-slate-900 shadow-xl opacity-100 nav-animation  md:shadow-none md:bg-transparent md:relative md:top-0 md:block md:w-auto md:mt-0 z-10"
+    id="navbar-default">
+    <ul
+      class="flex flex-col gap-5 p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-r-0">
+      <li>
+        <a href="#statistics"
+          class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Statistics</a>
+      </li>
+      <li>
+        <a href="/prediction"
+          class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Prediction</a>
+      </li>
+      <li>
+        <a href="/team" class="text-base text-slate-900 font-medium hover:underline-offset-4 hover:underline">Teams</a>
+      </li>
+    </ul>
+  </div>
 </nav>
