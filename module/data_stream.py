@@ -31,7 +31,7 @@ class DataStream:
         return self.__id_to_category
 
 
-def getCategoriesWiseCount(ds: DataStream) -> tuple[list, list]:
+def getCategoriesWiseCount(ds: DataStream):
     """
     This method returns the Total Categories and their count
     """
@@ -40,7 +40,7 @@ def getCategoriesWiseCount(ds: DataStream) -> tuple[list, list]:
     return list(ud.index), list(ud['website_url'])
 
 
-def getTrainingData(yTrain) -> tuple[list, list]:
+def getTrainingData(yTrain):
     """
     This method returns the Training data
     """
@@ -48,7 +48,7 @@ def getTrainingData(yTrain) -> tuple[list, list]:
     return list(yTrainCount.index), list(yTrainCount)
 
 
-def getTestingData(yTesting) -> tuple[list, list]:
+def getTestingData(yTesting):
     """
     This method returns the Testing data
     """
