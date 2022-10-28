@@ -9,7 +9,7 @@
         {% block title %}
         {% endblock %} | WCC
     </title>
-    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+    <link href="./static/css/styles.css" rel="stylesheet">
 </head>
 
 
@@ -31,7 +31,7 @@
         <!-- FOOTER -->
         {# {% include './common/footer.html' %}#}
     </div>
-    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+    <script src="./static/js/script.js"></script>
     <!-- JS SCRIPT -->
     {% block script %}
     {% endblock script %}
