@@ -2,16 +2,12 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
-
 
 from module.data_stream import DataStream, getOptions
 from model.train_model import MLModel, trainCategory
 from module.predict import predictCategory
 
 app = FastAPI()
-app.add_middleware(HTTPSRedirectMiddleware)
-
 
 dataStream = DataStream()
 mlModel = MLModel(dataStream.getX(), dataStream.getDF())
